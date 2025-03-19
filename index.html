@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeriAI - AI Fact Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>VeriAI - Fact Checker</h1>
+        </div>
+
+        <div class="chat-box" id="chatBox">
+            <div class="bot-message">👋 Welcome! Enter data below to verify its accuracy.</div>
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="claimInput" placeholder="Type your data here..." onkeypress="handleKeyPress(event)">
+            <button onclick="verifyClaim()">Check</button>
+            <button onclick="uploadFile()">Upload File</button>
+        </div>
+
+        <div id="resultBox" class="hidden">
+            <h2>Verification Results</h2>
+            <p><strong>Truth Score:</strong> <span id="truthScore"></span>%</p>
+            <p><strong>AI-Generated Score:</strong> <span id="aiScore"></span>%</p>
+            <h3>Verified Sources</h3>
+            <ul id="sourcesList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
